@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Alert Bar -->
+    <div class="alert-bar">
+        www.Zamboanga City.com
+        <span class="close-btn"></span>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="lLa Paz Logo.jpg" alt="Lanao Del Norte Logo">
+            La Paz Zamboanga City
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#picture">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#spots">Top Spots</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon">☰</div>
+    </header>
+
+    <!-- Main Section: Picture of the Place -->
+    <section id="picture">
+        <div class="overlay">
+            <h1>Mission</h1>
+            <p>To provide and develop effective action plans for security and maintenance services to achieve excellent performance.
+
+                To provide and develop effective systematic procedures and procedures and programs to expedite the procurement systems, recordings, storage system and issuances of properties and supplies, retrieval of records and disposition of properties of the city government.</p><br>
+            <h1>Vision</h1>
+            <p>Reliable and efficient service provider to the various government offices and to the public, equipped with modern and updated office and heavy equipments, managed by dedicated and competent officials together with qualified, trained and experienced technical and non-technical personnel committed to deliver fast, quality and excellent general/technical services needed.</p><br>
+            <h1>Core Values/Mantra</h1>
+            <p>Cooperation and Coordination are important to us We value equality and unconditional service We are trustworthy service providers We ensure proper accountability of all monies We ensure transparency in all transactions “Your money is in good hands”</p>
+        </div>
+    </section>
+    
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About La Paz Zamboanga City</h2>
+        <p>Barangay La Paz was once known as "Cadalagan" which may have been coined from the Tagalog word "dalag", a species of the freshwater fish caught in large numbers in the creeks and ponds in the area and the Cebuano word "dalagan" meaning “running” which refers to escaping prisoners from the San Ramon Penal Colony that normally pass through the Barangay in their futile dash to freedom.
+
+            The place was once densely vegetated with hardwood species and was a booming and prosperous hub of large scale commercial logging in the 1950's up to mid-1990's. Dacon and Zamboanga Timber lorded over the forest resources and established Camp Susana in the upper portion of the Barangay as their base of operation. Commercial logging ceased in the late 1990's with the implementation of the selected logging and then recently the total log ban.
+            
+            The residents through the Sangguniang Barangay changed Cadalagan to La Paz to honor their patron saint La Virgen de La Paz. Cadalagan was retained as the name of a sitio in Lower La Paz.</p>
+    </section>
+
+    <!-- Famous Tourist Spots -->
+    <section id="spots">
+        <h1>Zamboanga City 3 Famous Tourist Spots</h1>
+        <div class="spots-container">
+            <div class="spot" onclick="openModal(' Peak View Cafe', 'The highest mountain cafe in La Paz, The Peak is a popular destination with a panoramic view of the city. The Peak Tram takes visitors up to the Peak, offering a memorable journey through the city. The Peak cafe also has restaurants, shops, and entertainment venues, and Sky Terrace 428 is La Paz highest viewing platform..')">
+                <img src="wow.jpg" alt="Peak View Cafe">
+                <h3>Peak View Cafe</h3>
+                <p>Click picture to view description</p>
+            </div>
+            <div class="spot" onclick="openModal('Nancy falls', 'A famous waterfall located in La Paz Zamboanga City, Philippines. It is known for its stunning beauty and as a significant hydropower source for the region. The falls cascade from a height of 98 meters, creating a powerful and picturesque sight.')">
+                <img src="Nancyfalls.jpg" alt="Maria Cristina Falls">
+                <h3>Nancy Falls</h3>
+                <p>Click picture to view description</p>
+            </div>
+            <div class="spot" onclick="openModal('Pasonanca_Natural_Park', 'The Pasonanca Natural Park is a protected area that preserves a major watershed in the southern Philippine island of Mindanao in the Zamboanga Peninsula. It contains the headwaters of the Tumaga River in the southern Zamboanga Cordillera mountain range that serves the water requirements of some 800,000 residents in Zamboanga City. It was named after the village of Pasonanca located in the city northern fringes where the Pasonanca Park, a public eco-park, and the Abong-Abong Park, a pilgrimage site, can also be found..')">
+                <img src="falls.JPG" alt="Natural_Park">
+                <h3>Pasonanca_Natural_Park</h3>
+                <p>Click picture to view description</p>
+            </div>
+        </div>
+    
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <script>
+        function openModal(title, description) {
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-description').innerText = description;
+            document.body.style.overflow = 'hidden'; // Disable page scroll
+        }
+    
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.body.style.overflow = ''; // Re-enable page scroll
+        }
+    </script>
+    
+    
+    
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>Thank you for visiting on our website, Click Continue to see more details about Zamboanga City.</p>
+        <a href="https://en.wikipedia.org/wiki/Zamboanga_City" class="btn">Continue</a>        
+    </footer>
+</body>
+</html>
